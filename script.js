@@ -11,9 +11,11 @@ function checkTheNumber() {
     let userGuess = parseInt(inputbox.value); // Convert input value to number
 
     if (userGuess === randomNumber) {
+        result.textContent = 'Your are Right!'
         alert('You Got it Right, Congratulations!');
     } else {
         nogusscount = nogusscount - 1;
+        result.textContent = 'Your are Wrong!'
         if (nogusscount == 0){
             alert('You are Lost!, Generated Random Number is : '+ randomNumber)
         }
